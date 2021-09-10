@@ -4,9 +4,9 @@ library(dplyr)
 
 MechCarMPGdf <- read.csv('MechaCar_mpg.csv') #import dataset
 
-lm(vehicle_length ~ mpg,MechCarMPGdf) #create linear model
+lm(mpg ~ vehicle_length + vehicle_weight + spoiler_angle + ground_clearance + AWD,data=MechCarMPGdf) #create linear model
 
-summary(lm(vehicle_length ~ mpg,MechCarMPGdf)) #summarize linear model
+summary(lm(mpg ~ vehicle_length + vehicle_weight + spoiler_angle + ground_clearance + AWD,data=MechCarMPGdf)) #summarize linear model
 
 
 ## Deliverable 2
